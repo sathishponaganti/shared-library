@@ -1,6 +1,3 @@
-#!/usr/bin/env groovy
-
-def call(String name='User'){
-echo "Welcome,${name}."
-
+def call(Map config = [:]) {
+    sh "echo Hello ${config.name}. Today is ${config.dayOfWeek}."
 }
